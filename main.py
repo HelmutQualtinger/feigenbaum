@@ -6,13 +6,12 @@ def log_iterate(zn,r,n):
     return zn
 
 converge=[]
-growth=[]
-cnt=0
-rs=np.arange(2.9,4.,0.000001)
-converge = log_iterate(np.random.uniform(0.,1.,size=rs.shape),rs,100)
-print(cnt)
+
+rs=np.arange(2.9,4.,0.00001)
+converge = log_iterate(np.random.uniform(0.,1.,size=rs.shape),rs,1000)
+
 plt.figure()
-plt.title("Convergence value versus Growth rate")
-plt.plot(rs, converge,'.',markersize=0.1)
+plt.title("Convergence value versus Growth rate $Population(P) vs Population Growth(r)-$")
+plt.plot(rs, converge,'.',markersize=0.3)
 
 plt.show()
